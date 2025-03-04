@@ -1,0 +1,31 @@
+﻿<h2>All Students</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Courses</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Username</td>
+                <td>
+                    @foreach (var course in student.Courses)
+                    {
+                        <span>@course.CourseName</span>
+
+                        <br />
+                    }
+                </td>
+                <td>
+                    <a href="@Url.Action("AddCourse", "Student", new { studentId = student.StudentId, courseId = 1 })">Add Course</a>
+                    |
+                    <a href="@Url.Action("RemoveCourse", "Student", new { studentId = student.StudentId, courseId = 1 })">Remove Course</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
