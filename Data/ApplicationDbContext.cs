@@ -9,9 +9,9 @@ namespace Studentmanagementsystem.Data
         {
         }
 
-        public DbSet<CourseModel>? Courses { get; set; }
-        public DbSet<StudentCourseModel>? StudentCourses { get; set; }
-        public DbSet<StudentModel>? Students { get; set; }
-        public DbSet<UserModel>? Users { get; set; }
+        public DbSet<CourseModel> Courses { get; set; }
+        public DbSet<StudentCourseModel> StudentCourses { get; set; }
+        public DbSet<StudentModel> Students { get; set; }
+        public DbSet<UserModel> Users { get; set; }
     }
 }
